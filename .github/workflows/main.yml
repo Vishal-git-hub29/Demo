@@ -1,0 +1,13 @@
+name: Run on Push
+
+on: [push]
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+
+      - name: Test push
+        run: echo "The code push triggered this action successfully!"
